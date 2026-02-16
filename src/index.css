@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* === Основные стили === */
 * {
   @apply transition-all duration-300;
 }
@@ -13,7 +12,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  /* @apply bg-slate-50 text-slate-900 dark:bg-custom-dark dark:text-white; */
+
+  @apply bg-slate-50 text-slate-900 dark:bg-customDark dark:text-white;
+
   background-image:
     radial-gradient(
       900px circle at 10% 10%,
@@ -63,7 +64,10 @@ code {
     source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-/* === Анимации === */
+/* ========================= */
+/*         Анимации         */
+/* ========================= */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -111,7 +115,7 @@ code {
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   50% {
     transform: translateY(-10px);
@@ -127,35 +131,6 @@ code {
   }
 }
 
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 5px rgba(31, 107, 255, 0.5);
-  }
-  50% {
-    box-shadow:
-      0 0 20px rgba(31, 107, 255, 0.8),
-      0 0 30px rgba(255, 77, 0, 0.5);
-  }
-}
-
-@keyframes bounce-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 @keyframes gradient-shift {
   0% {
     background-position: 0% 50%;
@@ -168,7 +143,10 @@ code {
   }
 }
 
-/* === Анимационные классы === */
+/* ========================= */
+/*     Анимационные классы  */
+/* ========================= */
+
 .animate-fadeIn {
   animation: fadeIn 0.6s ease-out;
 }
@@ -184,15 +162,13 @@ code {
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-.animate-bounce-in {
-  animation: bounce-in 0.6s ease-out;
-}
+
+/* ========================= */
+/*         Градиенты        */
+/* ========================= */
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-energy-blue via-vibrant-orange to-neon-lime;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-energyBlue via-vibrantOrange to-neonLime;
   background-size: 200% auto;
   animation: gradient-shift 3s linear infinite;
 }
@@ -202,6 +178,10 @@ code {
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
 }
+
+/* ========================= */
+/*         Shimmer          */
+/* ========================= */
 
 .shimmer {
   background: linear-gradient(
@@ -226,7 +206,10 @@ code {
   background-size: 1000px 100%;
 }
 
-/* === Glass morphism effect === */
+/* ========================= */
+/*         Glass effect     */
+/* ========================= */
+
 .glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -238,10 +221,10 @@ code {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* === Hover эффекты === */
-.hover-lift {
-  @apply transition-all duration-300;
-}
+/* ========================= */
+/*         Hover effects    */
+/* ========================= */
+
 .hover-lift:hover {
   transform: translateY(-8px);
   box-shadow:
@@ -249,67 +232,65 @@ code {
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.hover-scale {
-  @apply transition-transform duration-300;
-}
 .hover-scale:hover {
   transform: scale(1.05);
 }
 
-.hover-glow {
-  @apply transition-all duration-300;
-}
 .hover-glow:hover {
   box-shadow: 0 0 20px rgba(31, 107, 255, 0.6);
 }
 
-/* === Кнопки === */
+/* ========================= */
+/*          Buttons         */
+/* ========================= */
+
 .btn-primary {
-  @apply px-6 py-3 bg-gradient-to-r from-energy-blue to-vibrant-orange text-white rounded-lg font-semibold;
-  @apply hover:from-vibrant-orange hover:to-energy-blue;
+  @apply px-6 py-3 bg-gradient-to-r from-energyBlue to-vibrantOrange text-white rounded-lg font-semibold;
+  @apply hover:from-vibrantOrange hover:to-energyBlue;
   @apply transform hover:scale-105 active:scale-95;
   @apply shadow-lg hover:shadow-xl;
-  @apply transition-all duration-300;
 }
 
 .btn-secondary {
   @apply px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg font-semibold;
   @apply border-2 border-gray-300 dark:border-gray-600;
-  @apply hover:border-vibrant-orange dark:hover:border-neon-lime;
+  @apply hover:border-vibrantOrange dark:hover:border-neonLime;
   @apply transform hover:scale-105 active:scale-95;
-  @apply transition-all duration-300;
 }
 
-/* === Карточки === */
+/* ========================= */
+/*           Cards          */
+/* ========================= */
+
 .card {
   @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden;
   @apply hover:shadow-2xl transition-all duration-300;
 }
 
-.card-hover {
-  @apply card hover-lift;
-}
+/* ========================= */
+/*           Inputs         */
+/* ========================= */
 
-/* === Input поля === */
 .input-modern {
   @apply w-full px-4 py-3 rounded-lg border-2 border-gray-300 dark:border-gray-600;
   @apply bg-white dark:bg-gray-700 text-gray-900 dark:text-white;
-  @apply focus:border-vibrant-orange dark:focus:border-neon-lime;
-  @apply focus:ring-4 focus:ring-energy-blue/20;
-  @apply transition-all duration-300;
+  @apply focus:border-vibrantOrange dark:focus:border-neonLime;
+  @apply focus:ring-4 focus:ring-energyBlue/20;
 }
 
-/* === Scrollbar === */
+/* ========================= */
+/*         Scrollbar        */
+/* ========================= */
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+
 ::-webkit-scrollbar-track {
   @apply bg-gray-100 dark:bg-gray-800;
 }
+
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-energy-blue to-vibrant-orange rounded-full;
-}
-::-webkit-scrollbar-thumb:hover {
-  @apply from-energy-blue to-vibrant-orange;
+  @apply bg-gradient-to-b from-energyBlue to-vibrantOrange rounded-full;
 }

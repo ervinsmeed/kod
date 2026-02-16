@@ -13,17 +13,37 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  @apply bg-slate-50 text-slate-900 dark:bg-custom-dark dark:text-white;
+  /* @apply bg-slate-50 text-slate-900 dark:bg-custom-dark dark:text-white; */
   background-image:
-    radial-gradient(900px circle at 10% 10%, rgba(31, 107, 255, 0.12), transparent 50%),
-    radial-gradient(700px circle at 90% 20%, rgba(255, 77, 0, 0.12), transparent 45%),
-    linear-gradient(180deg, rgba(245, 247, 255, 0.9) 0%, rgba(255, 255, 255, 1) 60%);
+    radial-gradient(
+      900px circle at 10% 10%,
+      rgba(31, 107, 255, 0.12),
+      transparent 50%
+    ),
+    radial-gradient(
+      700px circle at 90% 20%,
+      rgba(255, 77, 0, 0.12),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(245, 247, 255, 0.9) 0%,
+      rgba(255, 255, 255, 1) 60%
+    );
 }
 
 html.dark body {
   background-image:
-    radial-gradient(900px circle at 10% 10%, rgba(31, 107, 255, 0.18), transparent 50%),
-    radial-gradient(700px circle at 90% 20%, rgba(255, 77, 0, 0.18), transparent 45%),
+    radial-gradient(
+      900px circle at 10% 10%,
+      rgba(31, 107, 255, 0.18),
+      transparent 50%
+    ),
+    radial-gradient(
+      700px circle at 90% 20%,
+      rgba(255, 77, 0, 0.18),
+      transparent 45%
+    ),
     linear-gradient(180deg, rgba(11, 15, 26, 1) 0%, rgba(8, 10, 18, 1) 60%);
 }
 

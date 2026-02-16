@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .bg-custom-dark {
+    background-color: #0b1220;
+  }
+}
+
 * {
   @apply transition-all duration-300;
 }
@@ -12,9 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-
-  @apply bg-slate-50 text-slate-900 dark:bg-customDark dark:text-white;
-
+  @apply bg-slate-50 text-slate-900 dark:bg-custom-dark dark:text-white;
   background-image:
     radial-gradient(
       900px circle at 10% 10%,

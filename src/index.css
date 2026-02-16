@@ -172,7 +172,7 @@ code {
 /* ========================= */
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-energyBlue via-vibrantOrange to-neonLime;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-energy-blue via-vibrant-orange to-neon-lime;
   background-size: 200% auto;
   animation: gradient-shift 3s linear infinite;
 }
@@ -249,8 +249,8 @@ code {
 /* ========================= */
 
 .btn-primary {
-  @apply px-6 py-3 bg-gradient-to-r from-energyBlue to-vibrantOrange text-white rounded-lg font-semibold;
-  @apply hover:from-vibrantOrange hover:to-energyBlue;
+  @apply px-6 py-3 bg-gradient-to-r from-energy-blue to-vibrant-orange text-white rounded-lg font-semibold;
+  @apply hover:from-vibrant-orange hover:to-energy-blue;
   @apply transform hover:scale-105 active:scale-95;
   @apply shadow-lg hover:shadow-xl;
 }
@@ -258,7 +258,7 @@ code {
 .btn-secondary {
   @apply px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg font-semibold;
   @apply border-2 border-gray-300 dark:border-gray-600;
-  @apply hover:border-vibrantOrange dark:hover:border-neonLime;
+  @apply hover:border-vibrant-orange dark:hover:border-neon-lime;
   @apply transform hover:scale-105 active:scale-95;
 }
 
@@ -278,8 +278,8 @@ code {
 .input-modern {
   @apply w-full px-4 py-3 rounded-lg border-2 border-gray-300 dark:border-gray-600;
   @apply bg-white dark:bg-gray-700 text-gray-900 dark:text-white;
-  @apply focus:border-vibrantOrange dark:focus:border-neonLime;
-  @apply focus:ring-4 focus:ring-energyBlue/20;
+  @apply focus:border-vibrant-orange dark:focus:border-neon-lime;
+  @apply focus:ring-4 focus:ring-energy-blue/20;
 }
 
 /* ========================= */
@@ -296,5 +296,5 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-energyBlue to-vibrantOrange rounded-full;
+  @apply bg-gradient-to-b from-energy-blue to-vibrant-orange rounded-full;
 }
